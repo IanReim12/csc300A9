@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 public class TowersOfHanoi extends AppCompatActivity {
     private TextView disk0TV, disk1TV, disk2TV;
+    private TextView textView7, textView8, textView9;
+    private TextView TVWinner;
+
     private ViewGroup tower0VG, tower1VG, tower2VG, placeholderVG;
     private Disk disk0, disk1, disk2;
     private Tower tower0, tower1, tower2;
@@ -102,6 +105,19 @@ public class TowersOfHanoi extends AppCompatActivity {
         }else{
             this.selectDesination(this.tower2, this.tower2VG);
         }
+
+    }
+
+
+    public void declare_Winner(View v)
+    {
+        if (textView7.getText().toString().matches("========") & textView8.getText().toString().matches("====") & textView9.getText().toString().matches("==") )
+        {
+
+            System.out.println("Congratulations");
+
+        }
+
 
     }
 }
